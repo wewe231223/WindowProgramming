@@ -143,6 +143,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="WindowsProgramming.h" />
+    <ClInclude Include="Winmain_Funciton.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsProgramming.cpp" />
