@@ -1,15 +1,15 @@
 #pragma once
 
-#include "ObjectManager.h"
+#include "Shape.h"
 #include "Point.h"
 
-class Rect : public ObjectManager {
+class Rect : public Shape {
 private:
 	Point p1, p2;
 
 	HWND hWnd;
 public:
-	Rect();
+	Rect() = delete;
 
 	Rect(HWND, Point, Point);
 

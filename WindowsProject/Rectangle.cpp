@@ -1,7 +1,5 @@
 #include "Rectangle.h"
 
-Rect::Rect() {}
-
 Rect::Rect(HWND hWnd, Point p1, Point p2) : hWnd{ hWnd }, p1{ p1 }, p2{ p2 } {}
 
 Rect::~Rect() {}

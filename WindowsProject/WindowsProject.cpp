@@ -123,18 +123,20 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    if (message == WM_LBUTTONDOWN) {
-        /*Point p;
-        p.x = LOWORD(lParam);
-        p.y = HIWORD(lParam);*/
+	Point c(100, 100), p1(400, 400), p2(200, 200);
+	ObjectManager om;
+	om.insert(new Circle(hWnd, c, 100));
+	om.insert(new Rect(hWnd, p1, p2));
+    if (message == WM_PAINT) {
+        PAINTSTRUCT ps;
+        HDC h_dc = BeginPaint(hWnd, &ps);
 
-        Point c(100, 100), p1(400, 400), p2(200, 200);
-        ObjectManager** om = new ObjectManager * [2];
-        om[0] = new Circle(hWnd, c, 100);
-        om[1] = new Rect(hWnd, p1, p2);
-        for (int i = 0; i < 2; ++i) {
-            om[i]->draw();
-        }
+        om.draw();
+
+        EndPaint(hWnd, &ps);
+    }
+    else if (message == WM_LBUTTONDOWN) {
+        om.draw();
     }
     else if (message == WM_DESTROY) {
         PostQuitMessage(0);

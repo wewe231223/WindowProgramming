@@ -1,17 +1,16 @@
 #pragma once 
 
 #include "Point.h"
-#include "ObjectManager.h"
+#include "Shape.h"
 
-class Circle : public ObjectManager {
+class Circle : public Shape {
 private:
-	Point center;
-	int rad;
-
 	HWND hWnd;
-	//COLORREF color;
+
+	int rad;
+	Point center;
 public:
-	Circle();
+	Circle() = delete;
 	explicit Circle(HWND, Point, int);
 
 	~Circle();

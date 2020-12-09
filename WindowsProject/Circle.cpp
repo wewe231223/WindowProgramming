@@ -1,7 +1,5 @@
 #include "Circle.h"
 
-Circle::Circle() : center { Point{ 0, 0 } }, rad{ 0 } {}
-
 Circle::Circle(HWND hWnd, Point center, int rad) : hWnd{hWnd}, center { center }, rad{ rad } {}
 
 Circle::~Circle() {}
