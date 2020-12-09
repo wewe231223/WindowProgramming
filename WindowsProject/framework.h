@@ -13,6 +13,3 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
-//DirectX2D 헤더 파일 
-#include <d2d1.h>
-#pragma comment (lib, "D2D1.lib")

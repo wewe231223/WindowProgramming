@@ -24,20 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="WindowsProgramming.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Winmain_Function.h">
+    <ClInclude Include="WindowsProject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WindowsProgramming.cpp">
+    <ClCompile Include="WindowsProject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="WindowsProgramming.rc">
+    <ResourceCompile Include="WindowsProject.rc">
       <Filter>리소스 파일</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -45,7 +42,7 @@
     <Image Include="small.ico">
       <Filter>리소스 파일</Filter>
     </Image>
-    <Image Include="WindowsProgramming.ico">
+    <Image Include="WindowsProject.ico">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>
