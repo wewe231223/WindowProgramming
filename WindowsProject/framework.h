@@ -13,3 +13,10 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+
+
+// 따로 정의한 헤더파일을 추가하는 곳
+#include "ObjectManager.h"
+#include "Point.h"
+#include "Circle.h"
+#include "Rectangle.h"
