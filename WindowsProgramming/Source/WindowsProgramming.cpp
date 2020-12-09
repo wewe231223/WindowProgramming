@@ -20,6 +20,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
+
     CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 
     D2D1CreateFactory(D2D1_FACTORY_TYPE_SINGLE_THREADED, &gp_factory);
@@ -33,8 +34,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     LoadStringW(hInstance, IDC_WINDOWSPROGRAMMING, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
+    wchar_t window_name[] = L"Window is opened!";
+
     // 애플리케이션 초기화를 수행합니다:
-    if (!InitInstance (hInstance, nCmdShow))
+    if (!InitInstance (hInstance,nCmdShow,window_name))
     {
         return FALSE;
     }
