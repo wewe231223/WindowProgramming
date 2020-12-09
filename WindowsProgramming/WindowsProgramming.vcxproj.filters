@@ -27,7 +27,7 @@
     <ClInclude Include="WindowsProgramming.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Winmain_Funciton.h">
+    <ClInclude Include="Winmain_Function.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

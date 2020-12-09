@@ -16,7 +16,8 @@ using namespace D2D1;
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
-
+ID2D1Factory* gp_factory;                       // Diret2D를 구성하는 각종 개체들을 생성하는 객체 
+ID2D1HwndRenderTarget* gp_render_target;        // Direct2D에서 윈도우의 클라이언트 영역에 그림을 그리는 객체 
 
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
@@ -136,6 +137,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     }
     return 0;
 }
+
+
+
 
 // 정보 대화 상자의 메시지 처리기입니다.
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
